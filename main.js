@@ -22,3 +22,36 @@ for(let i = 0; i < imgArr.length; i++) {
 
 imageList.innerHTML = slider
 
+const imgWrapper = document.getElementsByClassName("img-wrapper");
+
+let active = 0;
+
+imgWrapper[active].classList.add('show');
+
+next.addEventListener('click', function() {
+    if(active < imgArr.length - 1) {
+        imgWrapper[active].classList.remove('show');
+        active++;
+        imgWrapper[active].classList.add('show');
+
+        prev.classList.remove('hide');
+
+        if(active == imgArr.length - 1) {
+            next.classList.add('hide');
+        }
+    }   
+});
+
+prev.addEventListener('click', function() {
+    if(active >= 0) {
+        imgWrapper[active].classList.remove('show');
+        active--;
+        imgWrapper[active].classList.add('show');
+
+        next.classList.remove("hide")
+
+        if(active == 0) {
+            prev.classList.add('hide');
+        }
+    }   
+});

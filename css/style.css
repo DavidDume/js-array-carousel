@@ -26,7 +26,19 @@ body {
 
 .img-wrapper {
     height: 100%;
-    
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#next.hide {
+    display: none;
+}
+
+#prev.hide {
+    display: none;
 }
 
 .image {

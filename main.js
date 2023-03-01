@@ -29,29 +29,30 @@ let active = 0;
 imgWrapper[active].classList.add('show');
 
 next.addEventListener('click', function() {
-    if(active < imgArr.length - 1) {
-        imgWrapper[active].classList.remove('show');
+
+       
+    imgWrapper[active].classList.remove('show');
+
+    if (active == imgArr.length - 1) {
+        active = 0;
+    } else {
         active++;
-        imgWrapper[active].classList.add('show');
+    }
 
-        prev.classList.remove('hide');
+    imgWrapper[active].classList.add('show');
 
-        if(active == imgArr.length - 1) {
-            next.classList.add('hide');
-        }
-    }   
+
 });
 
 prev.addEventListener('click', function() {
-    if(active >= 0) {
-        imgWrapper[active].classList.remove('show');
+
+    imgWrapper[active].classList.remove('show');
+    if(active == 0) {
+        active = imgArr.length - 1;
+    } else {
         active--;
-        imgWrapper[active].classList.add('show');
+    }
+    imgWrapper[active].classList.add('show');
 
-        next.classList.remove("hide")
 
-        if(active == 0) {
-            prev.classList.add('hide');
-        }
-    }   
 });

@@ -33,14 +33,6 @@ body {
     display: block;
 }
 
-#next.hide {
-    display: none;
-}
-
-#prev.hide {
-    display: none;
-}
-
 .image {
     object-fit: cover;
     width: 100%;
@@ -52,7 +44,6 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50%;
     background-color: #edf2f4;
     color: #2b2d42;
     cursor: pointer;
@@ -61,13 +52,14 @@ body {
     font-size: 20px;
     border-radius: 50%;
     padding: 10px;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
+    left: 50%;
 }
 
 #next {
-    right: 10px;
+    top: 10px;
 }
 
 #prev {
-    left: 10px;
+    bottom: 10px;
 }
